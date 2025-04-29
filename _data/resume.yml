@@ -2,19 +2,19 @@
   type: map
   contents:
     - name: Nom et prénom
-      value: Florian Pasco
+      value: Théo de Morais
     
     - name: Adresse mail
-      value: pasco.florian.pro@gmail.com
+      value: tdemorais.pro@gmail.com
     
     - name: Portable
-      value: 07 67 64 79 28
+      value: +33 6 72 28 81 53
     
     - name: Permis B
-      value: oui
+      value: non
     
     - name: Date de naissance
-      value: 15 Juillet 2002
+      value: 12 avril 2002
     
     - name: Compétences techniques
       value: C/C++, Python, Circuit sim. (SPICE), GitLab/GitHub, LTSpice, ARM CPU arch. (STM32), Traitement du signal, PCB-Design (Eagle, Kicad)
@@ -23,22 +23,18 @@
       value: Autonome, Curieux, Esprit d'équipe, Sociable, Organisé, Sérieux
     
     - name: Langue
-      value: Français (Natif), Anglais (B2+), Espagnol (B1), Allemand (A2)
+      value: Français (Natif), Anglais (B2+)
     
     - name: Passe-temps
-      value: Méditation, Course à pied & Entraînement musculaire, Lecture
+      value: Escalade, Course à pied, Natation
 
 - title: Expérience professionnelle
   type: time_table
   contents:
     - title: Technicien R&D
-      institution: AgriProTech, Quimperlé, France
+      institution: EasySunSystem, Braspart, France
       year: 26/06/23 - 01/09/23
       description:
-        Mission | Travailler sur un projet de véhicule terrestre sans pilote (UGV)
-        - Utilisation du micrologiciel libre ArduPilot et des logiciels associés (Mission Planner et QGroundControl).
-        - Création de schémas électroniques, soudure et test des différentes parties (multimètre, oscilloscope).
-        - Installation d'un GPS RTK (utilisation d'un Raspberry Pi) et d'un compas pour la navigation autonome.
 
 - title: Formation
   type: time_table
@@ -49,16 +45,7 @@
       description:
         - Diplôme prévu pour décembre 2025.
 
-    - title: BAC Scientifique Option SVT Spécialité ISN
-      institution: Lycée Victor Hugo, Hennebont, France
+    - title: BAC Scientifique Option SVT Spécialité Physique-Chimie
+      institution: Lycée VJacques Prevert, Taverny, France
       year: 09/17 – 06/20
 
-- title: Bénévolat
-  type: time_table
-  contents:
-    - title: Secrétaire | Responsable du fournisseur "CROUS"
-      institution: Cafétéria ENIB
-      year: 15/01/22 - 22/02/23
-      description:
-        - Préparation d'événements pour les étudiants.
-        - Commande auprès de certains de nos fournisseurs, gestion des stocks.
