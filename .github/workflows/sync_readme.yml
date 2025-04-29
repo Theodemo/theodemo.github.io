@@ -19,7 +19,7 @@ jobs:
       - name: Download README.md from external repo
         run: |
           mkdir -p temp
-          curl -f -o temp/README.md https://raw.githubusercontent.com/mpek29/MPek29/master/README.md
+          curl -f -o temp/README.md https://raw.githubusercontent.com/theodemo/theodemo/master/README.md
           if [ $? -ne 0 ]; then 
             echo "❌ Échec du téléchargement du README.md"; 
             exit 1
