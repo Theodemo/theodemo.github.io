@@ -6,7 +6,7 @@ nav: true
 nav_order: 3
 profile:
   align: right
-  image: flo_pic.png
+  image: theo_pic.jpg
   image_circular: false
 news: false
 selected_papers: false

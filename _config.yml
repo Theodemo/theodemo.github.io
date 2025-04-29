@@ -3,13 +3,13 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: PASCO
+first_name: de Morais
 middle_name: 
-last_name: Florian
-email: pasco.florian.pro@gmail.com
+last_name: Théo
+email: tdemorais.pro@gmail.com
 description: >
   Voici mon portfolio ! Ici vous avez accès à une présentation de nombreux projets que j’ai pu faire seul ou avec des collègues par le passé.
-keywords: portfolio, projets, florianpasco, étudiant, français, embedded system, système embarqué
+keywords: portfolio, projets, étudiant, français, embedded system, système embarqué
 
 lang: fr
 icon: favicon.jpg
@@ -65,7 +65,7 @@ github_username: theodemo # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: florianpasco # your LinkedIn user name
+linkedin_username: theodemo # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
