@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NucleoF411RE-ApplicationShield | de Morais  Théo</title>
+    <meta name="author" content="de Morais  Théo">
+    <meta name="description" content="🎛️ Nucleo F411RE synth project!">
+    <meta name="keywords" content="portfolio, projets, étudiant, français, embedded system, système embarqué">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="/assets/img/favicon.jpg">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://theodemo.github.io/projects/NucleoF411RE-ApplicationShield/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header --><header>
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">de Morais </span>Théo</a>
+            <!-- Navbar Toggle -->
+            <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-right" id="navbarNav">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">Projects</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/resume/">Resume</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+
+                    <!-- Toggle theme mode -->
+                    <li class="toggle-container">
+                        <button id="light-toggle" title="Change theme">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+
+                    <!-- Toggle language mode -->
+                    <li class="nav-item" id="language-toggle">
+                        <a class="nav-link" id="to-fr" href="https://translate.google.com/translate?hl=fr&amp;sl=en&amp;u=https://theodemo.github.io" style="padding-bottom: 0.4rem;padding-top: 0.4rem;padding-right: 0px;" rel="external nofollow noopener" target="_blank">
+                            <img alt="FR" title="FR" src="https://theodemo.github.io/assets/img/languages/fr.gif" style="padding-left: 6px;padding-right: 0px;">
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</header>
+
+<script>
+    // Vérifie si l'utilisateur est sur Google Traduction
+    const urlPattern = /^https:\/\/theodemo-github-io\.translate\.goog.*\?_x_tr_sl=en&_x_tr_tl=fr&_x_tr_hl=fr$/;
+    if (urlPattern.test(window.location.href)) {
+        // Remplace le bouton par le bouton anglais
+        const languageToggle = document.getElementById('language-toggle');
+        languageToggle.innerHTML = `
+            <a class="nav-link" href="https://theodemo.github.io/" style="padding-bottom: 0.4rem;padding-top: 0.4rem;padding-right: 0px;">
+                <img alt="EN" title="EN" src="https://theodemo.github.io/assets/img/languages/en.gif" style="padding-left: 6px;padding-right: 0px;">
+            </a>
+        `;
+    }
+</script>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <!-- page.html -->
+        <div class="post">
+          <header class="post-header">
+            <h1 class="post-title">NucleoF411RE-ApplicationShield
+              
+              
+              
+              
+              <a href="https://github.com/mpek29/NucleoF411RE-ApplicationShield" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fab fa-github" style="margin-left: 10px;margin-right: 10px;"></i></a>
+              
+
+              
+
+              
+
+            </h1>
+            <p class="post-description">🎛️ Nucleo F411RE synth project!</p>
+          </header>
+
+          <article>
+            <p><strong>NucleoF411RE-ApplicationShield</strong> is an open-source firmware project designed to leverage the <strong>Nucleo-F411RE</strong> development board in conjunction with the <strong>Application Shield</strong> from ARMmbed. This project aims to assemble a comprehensive codebase that explores all the functionalities offered by the combination of the Nucleo-F411RE and the Application Shield.</p>
+
+<h2 id="-purpose">🎯 Purpose</h2>
+
+<ul>
+  <li>🔌 <strong>GPIO Control</strong>: Interact with GPIO pins for reading, writing values, and generating PWM signals.</li>
+  <li>⏱️ <strong>Timer Management</strong>: Utilize timers to detect short and long button presses.</li>
+  <li>⚡ <strong>Interrupt Handling</strong>: Implement timer and button press interrupts for dynamic LED control.</li>
+  <li>💬 <strong>Serial Communication</strong>: Facilitate communication between the computer and the Nucleo board.</li>
+  <li>🌡️ <strong>Sensor Interaction</strong>: Communicate via I2C and SPI to gather data from sensors and control displays.</li>
+  <li>🔄 <strong>ADC Utilization</strong>: Read analog values from potentiometers.</li>
+</ul>
+
+<h2 id="-features">📝 Features</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>🏷️ Feature</th>
+      <th>🔍 Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>💡 <strong>GPIO Control</strong>
+</td>
+      <td>Read/write values and generate PWM signals.</td>
+    </tr>
+    <tr>
+      <td>⏲️ <strong>Timer Management</strong>
+</td>
+      <td>Manage timers TIM2 to TIM5 for button presses.</td>
+    </tr>
+    <tr>
+      <td>⚠️ <strong>Interrupts</strong>
+</td>
+      <td>Use interrupts for LED blinking and button actions.</td>
+    </tr>
+    <tr>
+      <td>💻 <strong>Serial Communication</strong>
+</td>
+      <td>Communicate with the Nucleo board via serial.</td>
+    </tr>
+    <tr>
+      <td>🌡️ <strong>I2C Communication</strong>
+</td>
+      <td>Retrieve temperature from the LM75 sensor and interact with MMA7660 accelerometer.</td>
+    </tr>
+    <tr>
+      <td>📺 <strong>SPI Communication</strong>
+</td>
+      <td>Control an LCD display using SPI.</td>
+    </tr>
+    <tr>
+      <td>🎚️ <strong>ADC Usage</strong>
+</td>
+      <td>Read potentiometer angles through ADC.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="applicationshield-schematic">ApplicationShield Schematic</h2>
+
+<p><img src="/assets/img/projects/NucleoF411RE-ApplicationShield/app_shield_sch.png" width="100%" height="auto"></p>
+
+<h2 id="nucleo-f411re-extension-schematic">Nucleo-F411RE Extension Schematic</h2>
+
+<p><img src="/assets/img/projects/NucleoF411RE-ApplicationShield/nucleof411re_ext_con.png" width="100%" height="auto"></p>
+
+<h2 id="️-example-applications">🎛️ Example Applications</h2>
+
+<ol>
+  <li>
+<strong>GPIO Test</strong>: Read/write values and generate PWM to control LED brightness on the board.</li>
+  <li>
+<strong>Button Press Detection</strong>: Utilize timers to differentiate between short and long presses on a push button.</li>
+  <li>
+<strong>LED Blinking with Interrupts</strong>: Implement interrupt-driven blinking of an LED based on timer events or button presses.</li>
+  <li>
+<strong>Serial Communication</strong>: Establish communication between the computer and Nucleo-F411RE for data exchange.</li>
+  <li>
+<strong>I2C Temperature Reading</strong>: Communicate with the LM75 temperature sensor and MMA7660 accelerometer via I2C.</li>
+  <li>
+<strong>SPI LCD Control</strong>: Use SPI to manage an LCD display connected to the development board.</li>
+  <li>
+<strong>ADC Potentiometer Reading</strong>: Capture the angle of potentiometers using the ADC.</li>
+</ol>
+
+<h2 id="-system-architecture">📐 System Architecture</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>🔌 GPIO Control</th>
+      <th>⏲️ Timer Management</th>
+      <th>⚠️ Interrupts</th>
+      <th>💬 Serial Communication</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Control LEDs and buttons</td>
+      <td>Manage button press timing</td>
+      <td>Trigger actions on interrupts</td>
+      <td>Exchange data with the computer</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-code-structure">📜 Code Structure</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>📁 NucleoF411RE-ApplicationShield/
+├── 📂 Core/
+│   ├── main.c        <span class="c"># Main firmware loop</span>
+│   ├── gpio.c        <span class="c"># GPIO handling and PWM</span>
+│   ├── timers.c      <span class="c"># Timer management</span>
+│   ├── interrupts.c   <span class="c"># Interrupt handling</span>
+│   ├── serial.c      <span class="c"># Serial communication control</span>
+│   ├── i2c.c         <span class="c"># I2C communication</span>
+│   ├── spi.c         <span class="c"># SPI communication for LCD</span>
+│   ├── adc.c         <span class="c"># ADC handling</span>
+├── 📂 Drivers/        <span class="c"># Nucleo HAL libraries</span>
+├── 📂 Inc/           <span class="c"># Header files</span>
+├── 📂 Assets/        <span class="c"># UI elements, example configurations</span>
+└── README.md         <span class="c"># This file</span>
+</code></pre></div></div>
+
+
+          </article>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2025 de Morais  Théo. 
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script defer src="/assets/js/common.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
