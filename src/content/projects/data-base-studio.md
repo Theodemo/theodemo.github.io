@@ -2,7 +2,7 @@
 # auto-generated: true
 title: "Data Base Studio"
 description: >-
-  Data Base Studio project.
+  Relational database project analyzing anime season success parameters for Studio Mappa (SQL, PostgreSQL)
 startDate: 2025-08-28
 skills:
   - Software Development

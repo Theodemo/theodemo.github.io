@@ -2,7 +2,7 @@
 # auto-generated: true
 title: "Snake Reinforcement"
 description: >-
-  Snake Reinforcement project.
+  Q-Learning agent that learns to play Snake on a 15x15 grid using reinforcement learning, with Pygame visualization
 startDate: 2025-10-21
 skills:
   - Jupyter Notebook
