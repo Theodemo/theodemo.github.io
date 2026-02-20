@@ -74,7 +74,7 @@ const projects = defineCollection({
       featured: z.boolean().optional().default(false),
       title: z.string(),
       description: z.string(),
-      image: image(),
+      image: image().optional(),
       startDate: z.coerce.date(),
       endDate: z.coerce.date().optional(),
       skills: z.array(z.string()),

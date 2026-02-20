@@ -1,8 +1,19 @@
 ---
 title: About Me
-photo: '@assets/about/photo.png'
-link: https://linkedin.com/in/lauroguedes
+photo: '@assets/hero/avatar.png'
+link: https://linkedin.com/in/Theodemo
 ---
-My toolkit revolves around the **Laravel and Vue JS** ecosystem. I enjoy crafting everything from robust APIs and full-stack applications to open-source tools like the [Mary UI Laravel Starter Kit](https://github.com/lauroguedes/mary-ui-starter-kit) and [Bloomfolio](https://github.com/lauroguedes/bloomfolio), an Astro portfolio template that's been forked dozens of times.
 
-When I'm not coding, I'm probably exploring AI art, traveling, or listening to 🎸 heavy music way too loud.
+Hi there! 👋
+
+🎓 I'm **Théo de Morais**, a Master's student in Engineering specializing in **Electronics, Computer Science, and Mechatronics**.
+
+👨‍💻 I am passionate about creating and sharing **open-source projects** that are reusable and easy to understand, helping others grow in the fields of electronics, programming, and mechanics.
+
+🔧 My interests span across:
+- Embedded systems and IoT
+- Analog and digital electronics
+- Software development
+- Mechatronics and robotics
+
+Feel free to explore my projects and get in touch!

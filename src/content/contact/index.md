@@ -1,10 +1,10 @@
 ---
-icon: MessageCircleCode
-linkUrl: https://x.com/leowg
-linkText: with a direct question on X (twitter)
+icon: Mail
+linkUrl: mailto:tdemorais.pro@gmail.com
+linkText: by email
 footerIcon: Pickaxe
-footerText: Crafted by an Artisan
-footerLinkText: Lauro Guedes
-footerLinkUrl: https://lauroguedes.dev
+footerText: Crafted by
+footerLinkText: Théo de Morais
+footerLinkUrl: https://github.com/Theodemo
 ---
-Want to chat? shoot me a dm
+Want to chat? Feel free to reach out

@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import SkillBadge from "./SkillBadge.astro";
-import { ExternalLink, Eye } from "@lucide/astro";
+import { ExternalLink } from "@lucide/astro";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -24,11 +24,8 @@ function formatPeriod(startDate: Date, endDate?: Date) {
 ---
 
 <article class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
-  <a
-    class="hover:opacity-80 transition-opacity"
-    href={`/projects/${project.id}`}
-  >
-    <figure class="aspect-video">
+  <figure class="aspect-video">
+    {project.data.image ? (
       <Image
         src={project.data.image}
         alt={project.data.title}
@@ -36,12 +33,14 @@ function formatPeriod(startDate: Date, endDate?: Date) {
         width={600}
         height={400}
       />
-    </figure>
-  </a>
+    ) : (
+      <div class="w-full h-full bg-base-300 flex items-center justify-center">
+        <span class="text-4xl font-bold text-base-content/20">{project.data.title.charAt(0)}</span>
+      </div>
+    )}
+  </figure>
   <div class="card-body">
-    <h3 class="card-title hover:text-primary transition-colors">
-      <a href={`/projects/${project.id}`}>{project.data.title}</a>
-    </h3>
+    <h3 class="card-title">{project.data.title}</h3>
     <time class="text-sm text-base-content/60">
       {formatPeriod(project.data.startDate, project.data.endDate)}
     </time>
@@ -84,11 +83,6 @@ function formatPeriod(startDate: Date, endDate?: Date) {
           </a>
         )
       }
-      <div class="tooltip" data-tip="View project details">
-        <a href={`/projects/${project.id}`} class="btn btn-sm btn-primary">
-          <Eye class="size-4" />
-        </a>
-      </div>
     </div>
   </div>
 </article>
