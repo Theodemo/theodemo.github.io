@@ -22,13 +22,14 @@ function formatPeriod(startDate: Date, endDate?: Date) {
 }
 ---
 
-<a href={`/projects/${project.id}`} class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow cursor-pointer">
-  <figure class="aspect-video">
+<a href={`/projects/${project.id}`} class="card bg-base-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:border-primary border-2 border-transparent transition-all duration-300 cursor-pointer">
+  <figure class="aspect-video overflow-hidden">
+
     {project.data.image ? (
       <Image
         src={project.data.image}
         alt={project.data.title}
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         width={600}
         height={400}
       />
