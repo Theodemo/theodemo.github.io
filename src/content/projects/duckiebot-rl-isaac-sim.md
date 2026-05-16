@@ -25,7 +25,7 @@ Stage de fin d'études (6 mois) effectué au sein du **Centre d'Excellence Simul
 
 L'apprentissage par renforcement (RL) permet à un agent d'apprendre des comportements complexes par interaction avec son environnement, sans programmation explicite. Mais l'entraînement direct sur un robot physique est coûteux, risqué pour le matériel et difficilement parallélisable. La simulation répond à ces contraintes — encore faut-il que les politiques apprises transfèrent correctement au monde réel.
 
-Deux stages précédents (Olivier Meyer 2022, Maxime Baudet 2023) avaient exploré la démarche sur des cas aérospatiaux simulés (Unreal Engine, Simulink). Ce stage étend SIGMA à un **véhicule terrestre réel**, avec rendu *ray-tracing* temps réel et simulation physique GPU-accélérée (Isaac Sim Lab).
+Deux stages précédents avaient exploré la démarche sur des cas aérospatiaux simulés (Unreal Engine, Simulink). Ce stage étend SIGMA à un **véhicule terrestre réel**, avec rendu *ray-tracing* temps réel et simulation physique GPU-accélérée (Isaac Sim Lab).
 
 ## Problématique
 
