@@ -6,11 +6,15 @@ link: https://linkedin.com/in/Theodemo
 
 Hi there! 👋
 
-🎓 I'm **Théo de Morais**, a Master's student in Engineering specializing in **Electronics, Computer Science, and Mechatronics**.
+🎓 I'm **Théo de Morais**, a **Control Systems Engineer** based in France. I recently graduated from **École Nationale d'Ingénieurs de Brest (ENIB)**, with a background in **Electronics, Computer Science, and Mechatronics**.
 
-👨‍💻 I am passionate about creating and sharing **open-source projects** that are reusable and easy to understand, helping others grow in the fields of electronics, programming, and mechanics.
+💼 I just completed my end-of-studies internship at **Scalian**, and I'm now **actively looking for a position** in the same field — **control systems combined with Reinforcement Learning (RL)**.
+
+👨‍💻 Alongside my work, I love creating and sharing **open-source projects** that are reusable and easy to understand, helping others grow in the fields of electronics, programming, and mechanics.
 
 🔧 My interests span across:
+- Control systems and automation
+- Reinforcement Learning (RL) applied to control
 - Embedded systems and IoT
 - Analog and digital electronics
 - Software development
