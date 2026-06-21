@@ -1,5 +1,4 @@
 import { config, fields, collection, singleton } from "@keystatic/core";
-import { block } from "@keystatic/core/content-components";
 
 export default config({
   storage: import.meta.env.PUBLIC_KEYSTATIC_GITHUB_APP_SLUG
@@ -178,20 +177,12 @@ export default config({
           label: "Show Projects Section",
           defaultValue: true,
         }),
-        showBlogSection: fields.checkbox({
-          label: "Show Blog Section",
-          defaultValue: true,
-        }),
         showWorkSection: fields.checkbox({
           label: "Show Work Experience Section",
           defaultValue: true,
         }),
         showEducationSection: fields.checkbox({
           label: "Show Education Section",
-          defaultValue: true,
-        }),
-        showHackathonsSection: fields.checkbox({
-          label: "Show Hackathons Section",
           defaultValue: true,
         }),
         showContactSection: fields.checkbox({
@@ -411,153 +402,6 @@ export default config({
               publicPath: "@assets/projects/",
             },
           },
-          components: {
-            Spotify: block({
-              label: "Spotify Playlist",
-              schema: {
-                url: fields.text({ label: "Playlist ID" }),
-              },
-            }),
-          },
-        }),
-      },
-    }),
-
-    blog: collection({
-      label: "Blog Posts",
-      path: "src/content/blog/**",
-      slugField: "title",
-      entryLayout: "content",
-      format: {
-        contentField: "content",
-      },
-      schema: {
-        title: fields.slug({
-          name: { label: "Post Title" },
-        }),
-        description: fields.text({
-          label: "Description",
-          multiline: true,
-          description: "SEO description and excerpt",
-        }),
-        image: fields.image({
-          label: "Cover Image",
-          directory: "src/assets/blog",
-          publicPath: "@assets/blog/",
-          validation: { isRequired: true },
-          description: "Blog post cover image",
-        }),
-        publishDate: fields.date({
-          label: "Publish Date",
-          validation: { isRequired: true },
-        }),
-        updatedDate: fields.date({
-          label: "Updated Date",
-          description: "Last update date (optional)",
-        }),
-        tags: fields.array(fields.text({ label: "Tag" }), {
-          label: "Tags",
-          itemLabel: (props) => props.value,
-          description: "Blog post tags",
-        }),
-        content: fields.markdoc({
-          label: "Content",
-          description: "Blog post content",
-          options: {
-            image: {
-              directory: "src/assets/blog",
-              publicPath: "@assets/blog/",
-            },
-          },
-          components: {
-            Spotify: block({
-              label: "Spotify Embed",
-              schema: {
-                url: fields.text({
-                  label: "Spotify URL",
-                  description:
-                    "Full Spotify URL (track, album, playlist, or podcast)",
-                  validation: { isRequired: true },
-                }),
-              },
-            }),
-            YouTube: block({
-              label: "YouTube Video",
-              schema: {
-                id: fields.text({
-                  label: "Video ID",
-                  description: "YouTube video ID (optional if URL is provided)",
-                }),
-                url: fields.text({
-                  label: "YouTube URL",
-                  description: "Full YouTube URL (optional if ID is provided)",
-                }),
-              },
-            }),
-            Twitter: block({
-              label: "Twitter/X Embed",
-              schema: {
-                url: fields.text({
-                  label: "Tweet URL",
-                  description: "Full Twitter/X URL",
-                }),
-                id: fields.text({
-                  label: "Tweet ID",
-                  description: "Tweet ID (optional if URL is provided)",
-                }),
-                username: fields.text({
-                  label: "Username",
-                  description: "Twitter username (optional if URL is provided)",
-                }),
-              },
-            }),
-          },
-        }),
-      },
-    }),
-
-    hackathons: collection({
-      label: "Hackathons",
-      path: "src/content/hackathons/*",
-      slugField: "title",
-      format: {
-        contentField: "content",
-      },
-      schema: {
-        title: fields.slug({
-          name: { label: "Hackathon Name" },
-        }),
-        location: fields.text({
-          label: "Location",
-          description: 'City, venue, or "Virtual"',
-        }),
-        description: fields.text({
-          label: "Description",
-          multiline: true,
-          description: "Brief hackathon summary",
-        }),
-        startDate: fields.date({
-          label: "Start Date",
-          validation: { isRequired: true },
-        }),
-        endDate: fields.date({
-          label: "End Date",
-          description: "Last day of event (optional)",
-        }),
-        logo: fields.image({
-          label: "Event Logo",
-          directory: "src/assets/hackathons",
-          publicPath: "@assets/hackathons/",
-          description: "Optional event logo",
-        }),
-        sourceLink: fields.url({
-          label: "Project Link",
-          description: "GitHub repo or project URL (optional)",
-        }),
-        content: fields.markdoc({
-          label: "Full Description",
-          description: "Detailed information about the hackathon and project",
-          extension: "md",
         }),
       },
     }),

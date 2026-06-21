@@ -9,10 +9,8 @@ extraLinks:
     icon: Flower2
     label: LinkedIn
     displayOn: both
-showAboutSection: false
+showAboutSection: true
 showProjectsSection: true
-showBlogSection: false
-showWorkSection: false
-showEducationSection: false
-showHackathonsSection: false
+showWorkSection: true
+showEducationSection: true
 showContactSection: true
