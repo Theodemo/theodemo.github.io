@@ -83,17 +83,6 @@ const projects = defineCollection({
     }),
 });
 
-// About singleton
-const about = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdoc,yaml}", base: "./src/content/about" }),
-  schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      photo: image().optional(),
-      link: z.string().url().optional(),
-    }),
-});
-
 // General singleton
 const general = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdoc,yaml}", base: "./src/content/general" }),
@@ -119,7 +108,6 @@ const general = defineCollection({
         displayOn: z.enum(["both", "dock", "fab"]).optional().default("both"),
       })
     ),
-    showAboutSection: z.boolean(),
     showProjectsSection: z.boolean(),
     showWorkSection: z.boolean(),
     showEducationSection: z.boolean(),
@@ -146,7 +134,6 @@ export const collections = {
   work,
   education,
   projects,
-  about,
   general,
   contact,
 };

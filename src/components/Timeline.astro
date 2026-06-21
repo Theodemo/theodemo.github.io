@@ -30,9 +30,11 @@ const IconComponent = icon;
 // Load collection entries
 const entries = await getCollection(collection);
 
-// Load about content to get the link (for work section button)
-const aboutEntry = await getEntry("about", "index");
-const aboutLink = aboutEntry?.data?.link;
+// Load hero to get the LinkedIn link (for work section button)
+const heroEntry = await getEntry("hero", "index");
+const linkedInLink = heroEntry?.data?.socialLinks?.find(
+  (l) => l.icon === "LinkedIn",
+)?.url;
 
 // Sort by start date, most recent first
 const sortedEntries = entries.sort(
@@ -322,10 +324,10 @@ const entriesWithContent = await Promise.all(
     }
 
     {
-      collection === "work" && variant === "timeline" && aboutLink && (
+      collection === "work" && variant === "timeline" && linkedInLink && (
         <div class="text-center mt-10">
           <a
-            href={aboutLink}
+            href={linkedInLink}
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-primary btn-outline"

@@ -77,35 +77,6 @@ export default config({
       },
     }),
 
-    about: singleton({
-      label: "About",
-      path: "src/content/about/",
-      format: {
-        contentField: "content",
-      },
-      schema: {
-        title: fields.text({
-          label: "Title",
-          description: "About section title",
-        }),
-        photo: fields.image({
-          label: "Photo",
-          directory: "src/assets/about",
-          publicPath: "@assets/about/",
-          description: "Your photo for the about section",
-        }),
-        content: fields.markdoc({
-          label: "Content",
-          description: "About section content (supports Markdown)",
-          extension: "md",
-        }),
-        link: fields.url({
-          label: "LinkedIn URL or Other",
-          description: "Your LinkedIn profile URL or other link",
-        }),
-      },
-    }),
-
     general: singleton({
       label: "General Settings",
       path: "src/content/general/",
@@ -169,10 +140,6 @@ export default config({
             description: "Links to display in the floating action button",
           }
         ),
-        showAboutSection: fields.checkbox({
-          label: "Show About Section",
-          defaultValue: true,
-        }),
         showProjectsSection: fields.checkbox({
           label: "Show Projects Section",
           defaultValue: true,
