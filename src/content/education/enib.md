@@ -1,7 +1,7 @@
 ---
 title: École Nationale d'Ingénieurs de Brest (ENIB)
 subtitle: Engineering Degree — Electronics, Computer Science & Mechatronics
-startDate: 2021-09-01
+startDate: 2020-09-01
 endDate: 2026-06-30
 link: https://www.enib.fr
 ---
