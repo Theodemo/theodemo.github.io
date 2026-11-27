@@ -59,6 +59,8 @@ const SPECIAL_WORDS = {
   json: "JSON",
   ltspice: "LTspice",
   midi: "MIDI",
+  pcb: "PCB",
+  pi: "PI",
   pmsm: "PMSM",
   pyqt5: "PyQt5",
   pysimcoder: "pysimCoder",
