@@ -47,10 +47,44 @@ function slugify(name) {
     .replace(/(^-|-$)/g, "");
 }
 
+// Words that must keep a specific spelling once titleized
+const SPECIAL_WORDS = {
+  adsr: "ADSR",
+  ansi: "ANSI",
+  dsp: "DSP",
+  fir: "FIR",
+  freertos: "FreeRTOS",
+  iir: "IIR",
+  iot: "IoT",
+  json: "JSON",
+  ltspice: "LTspice",
+  midi: "MIDI",
+  pmsm: "PMSM",
+  pyqt5: "PyQt5",
+  pysimcoder: "pysimCoder",
+  ros2: "ROS 2",
+  rs485: "RS485",
+  sql: "SQL",
+  sqlite: "SQLite",
+  stm32: "STM32",
+  uml: "UML",
+  vco: "VCO",
+  wav: "WAV",
+};
+
+// Whole names (repo names or topics) with a fixed display form
+const SPECIAL_NAMES = {
+  "micro-ros": "micro-ROS",
+  "ansi-escape-codes": "ANSI Escape Codes",
+};
+
 function titleize(name) {
+  if (SPECIAL_NAMES[name.toLowerCase()]) return SPECIAL_NAMES[name.toLowerCase()];
   return name
     .replace(/[_-]/g, " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase());
+    .split(" ")
+    .map((w) => SPECIAL_WORDS[w.toLowerCase()] || w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 }
 
 function extractSkills(repo) {
@@ -113,12 +147,17 @@ async function fetchReadme(repo) {
 // ── README cleanup ─────────────────────────────────────
 
 function fixReadmeImagePaths(readmeContent, repo) {
-  const rawBase = `https://raw.githubusercontent.com/${repo.full_name}/${repo.default_branch || "main"}`;
-  // Convert relative image paths to absolute GitHub raw URLs
-  // Handles: ![alt](path) and <img src="path">
+  const branch = repo.default_branch || "main";
+  const rawBase = `https://raw.githubusercontent.com/${repo.full_name}/${branch}`;
+  const blobBase = `https://github.com/${repo.full_name}/blob/${branch}`;
+  // Convert relative paths to absolute GitHub URLs:
+  // - images ![alt](path) and <img src="path"> -> raw files
+  // - links [text](path), e.g. README.fr.md or a source file -> GitHub page
+  //   (anchors #..., mailto: and absolute URLs are left untouched)
   return readmeContent
     .replace(/!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)/g, `![$1](${rawBase}/$2)`)
-    .replace(/<img\s([^>]*?)src="(?!https?:\/\/)([^"]+)"/g, `<img $1src="${rawBase}/$2"`);
+    .replace(/<img\s([^>]*?)src="(?!https?:\/\/)([^"]+)"/g, `<img $1src="${rawBase}/$2"`)
+    .replace(/(?<!!)\[([^\]]*)\]\((?!https?:\/\/|#|mailto:)([^)]+)\)/g, `[$1](${blobBase}/$2)`);
 }
 
 // ── Image lookup ────────────────────────────────────────
