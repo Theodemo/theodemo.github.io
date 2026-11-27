@@ -78,6 +78,7 @@ const SPECIAL_WORDS = {
 const SPECIAL_NAMES = {
   "micro-ros": "micro-ROS",
   "ansi-escape-codes": "ANSI Escape Codes",
+  "raspberry-pi": "Raspberry Pi",
 };
 
 function titleize(name) {
